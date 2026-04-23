@@ -1,0 +1,136 @@
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Gradient text with animation */
+.hero-gradient {
+    background: linear-gradient(270deg, #ffffff, #5ffbd6, #38debb, #ffffff);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientShift 6s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Typing effect for "Vida Digital" */
+.animated-title-container {
+    display: inline-block;
+}
+
+.animated-title {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 2.5s steps(30, end) forwards;
+    max-width: 100%;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes terminalTyping {
+    0%, 10% { width: 0; }
+    45%, 55% { width: 100%; }
+    90%, 100% { width: 0; }
+}
+
+.terminal-typewriter {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: terminalTyping 6s steps(40, end) infinite;
+    vertical-align: bottom;
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #5ffbd6; }
+}
+
+/* Background effects */
+.grid-pattern {
+    background-image: 
+        linear-gradient(to right, rgba(95, 251, 214, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(95, 251, 214, 0.05) 1px, transparent 1px);
+    background-size: 30px 30px;
+    position: relative;
+}
+
+.scanline {
+    width: 100%;
+    height: 2px;
+    background: rgba(95, 251, 214, 0.3);
+    box-shadow: 0 0 10px rgba(95, 251, 214, 0.6);
+    position: absolute;
+    animation: scan 3s linear infinite;
+    z-index: 10;
+}
+
+@keyframes scan {
+    0% { top: 0; }
+    100% { top: 100%; }
+}
+
+/* Floating elements animation */
+.float-anim {
+    animation: floating 6s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+.terminal-shadow {
+    box-shadow: 0 10px 40px rgba(56, 222, 187, 0.15);
+}
+
+.pulse-glow {
+    animation: pulseGlow 2s infinite;
+}
+
+@keyframes pulseGlow {
+    0% { box-shadow: 0 0 0 0 rgba(95, 251, 214, 0.4); }
+    70% { box-shadow: 0 0 0 15px rgba(95, 251, 214, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(95, 251, 214, 0); }
+}
+
+.data-stream {
+    mask-image: linear-gradient(to bottom, transparent, black, transparent);
+}
+
+.float-card-1 {
+    animation: floatSubtle 8s ease-in-out infinite;
+}
+.float-card-2 {
+    animation: floatSubtle 9s ease-in-out infinite;
+    animation-delay: 1s;
+}
+.float-card-3 {
+    animation: floatSubtle 7s ease-in-out infinite;
+    animation-delay: 2s;
+}
+
+@keyframes floatSubtle {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0px); }
+}
+
+@keyframes graphBarLoop {
+    0%, 100% { transform: scaleY(0.4); opacity: 0.7; }
+    50% { transform: scaleY(1); opacity: 1; }
+}
+
+.animate-graph-loop {
+    animation: graphBarLoop 2s ease-in-out infinite;
+    transform-origin: bottom;
+}
